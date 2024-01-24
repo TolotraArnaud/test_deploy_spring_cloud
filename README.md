@@ -1,1 +1,0 @@
-# test_deploy_spring_cloud

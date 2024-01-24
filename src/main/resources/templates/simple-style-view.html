@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
+    <title>Liste des styles</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="col-md-2 col-lg-2"></div>
+            <div class="col-md-4 col-lg-4">
+                <ul th:each="style : ${listestyles}">
+                    <ul th:each="materiau : ${style.getMateriaux()}">
+                        <li th:text="${materiau.getNom()}"></li>
+                    </ul>
+                    <!-- <p th:if="${style.getMateriaux() == null}" >Null ilay getMateriaux()</p>
+                    <p th:text="${style.getMateriaux().size()}" ></p> -->
+                </ul>
+            </div>
+        <div class="col-md-2 col-lg-2"></div>
+    </div>
+    
+</body>
+</html>
